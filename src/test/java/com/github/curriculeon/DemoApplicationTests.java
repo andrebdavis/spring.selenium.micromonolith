@@ -7,6 +7,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
@@ -19,14 +22,15 @@ public class DemoApplicationTests {
     @Test
     public void test() {
         // Use WebDriverManager to manage ChromeDriver
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.firefoxdriver().setup();
 
         // Initialize the WebDriver
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
 
         try {
+
             // Navigate to the web page
-            driver.get("your_webpage_url_here");
+            driver.get("http://localhost:8080/");
 
             // Find and interact with the input fields
             WebElement firstNameInput = driver.findElement(By.id("fname"));
