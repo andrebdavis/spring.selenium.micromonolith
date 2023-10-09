@@ -2,21 +2,11 @@ package com.github.curriculeon;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 
-import java.sql.DriverManager;
-
-@RunWith(SpringJUnit4ClassRunner.class)
-@WebAppConfiguration
 public class DemoApplicationTests {
 
     @Test
@@ -30,7 +20,7 @@ public class DemoApplicationTests {
         try {
 
             // Navigate to the web page
-            driver.get("http://localhost:8080/");
+            driver.get("https://automationexercise.com/");
 
             // Find and interact with the input fields
             WebElement firstNameInput = driver.findElement(By.id("fname"));
