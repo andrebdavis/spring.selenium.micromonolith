@@ -75,6 +75,28 @@ public class DemoApplicationTest_Broken {
             //Enter credentials in firstname field
             firstNameField.sendKeys(firstName);
 
+            //Make driver click Last name field
+            WebElement lastNameField = driver.findElement(By.cssSelector("input[data-qa*='last_name']"));
+
+            //Make driver generate last name
+            String lastName = RandomStringUtils.randomAlphabetic(5);
+
+            //Enter credentials in lastname field
+            lastNameField.sendKeys(lastName);
+
+            //Make driver click Address Field
+            WebElement addressField = driver.findElement(By.cssSelector("input[data-qa*='address']"));
+
+            //Make driver generate address field
+            String address = RandomStringUtils.randomAlphabetic(20);
+
+            //Enter credentials in address field
+            addressField.sendKeys(address);
+
+            
+
+
+
 
 
 
