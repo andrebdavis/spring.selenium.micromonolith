@@ -57,6 +57,27 @@ public class DemoApplicationTest_Broken {
             String expected_url1 = "https://automationexercise.com/signup";
             Assert.assertEquals(expected_url1,actual_url1);
 
+            //Make driver click password box
+            WebElement passwordField = driver.findElement(By.cssSelector("input[type*='password']"));
+
+            //Clicked on password field and made password
+            String password = RandomStringUtils.randomAlphabetic(10);
+
+            //Enter credentials into password field
+            passwordField.sendKeys(password);
+
+            //Make driver click First name field
+            WebElement firstNameField = driver.findElement(By.cssSelector("input[data-qa*='first_name']"));
+
+            //Make driver generate first name
+            String firstName = RandomStringUtils.randomAlphabetic(5);
+
+            //Enter credentials in firstname field
+            firstNameField.sendKeys(firstName);
+
+
+
+
             //Make driver click password button
             //g driver.findElement(By.cssSelector())
 
@@ -67,7 +88,6 @@ public class DemoApplicationTest_Broken {
 
 
             //  driver.quit();
-
         }
 
     }
