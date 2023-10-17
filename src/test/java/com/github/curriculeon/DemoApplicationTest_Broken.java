@@ -93,7 +93,18 @@ public class DemoApplicationTest_Broken {
             //Enter credentials in address field
             addressField.sendKeys(address);
 
+
+
+            //Make driver generate country
+            WebElement countryField = driver.findElement(By.cssSelector("select[data-qa*='country']"));
+
+            //Send country field US
             
+            countryField.sendKeys("u");
+
+
+
+
 
 
 
